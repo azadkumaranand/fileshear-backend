@@ -4,6 +4,16 @@ const app = express();
 const mongoose = require('mongoose');
 const path = require('path');
 
+const deleteOldData = require('./script');
+
+const day = 24*60*60*1000;
+
+setInterval(() => {
+    deleteOldData().then(()=>{
+        process.exit();
+    });
+}, day);
+
 const cors = require('cors');
 
 const connectDB = require('./config/db');
