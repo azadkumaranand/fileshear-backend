@@ -22,7 +22,7 @@ const connectDB = require('./config/db');
 //cors middleware
 
 const corsOptions = {
-    origin: ['http://127.0.0.1:3001', 'http://127.0.0.1:3000', 'https://fileshear-backend.onrender.com']
+    origin: ['http://127.0.0.1:3001', 'http://127.0.0.1:3000', 'https://fileshear-backend.onrender.com', 'https://azadkumaranand.github.io/']
 }
 
 app.use(cors(corsOptions));
